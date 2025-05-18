@@ -3,25 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>Contato</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #555;
+    }
+
+    button {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <h2>Formulário de Contato</h2>
 
   <form action="https://formspree.io/f/xgvkdqvg" method="POST">
-    <label>Nome:</label><br>
-    <input type="text" name="nome" required><br><br>
+    <h2>Formulário de Contato</h2>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-    <label>Telefone:</label><br>
-    <input type="tel" name="telefone"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-    <label>Mensagem:</label><br>
-    <textarea name="mensagem" rows="4" cols="50" required></textarea><br><br>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone">
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
 
     <button type="submit">Enviar</button>
   </form>
+
 </body>
 </html>
 
